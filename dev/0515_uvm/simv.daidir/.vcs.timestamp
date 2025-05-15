@@ -287,7 +287,7 @@
 0 /tools/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/reg/snps_uvm_reg_bank.svh
 0 vcs/vcs_uvm_alt.sv
 0 /tools/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/vcs/vcs_uvm_alt.sv
-30
+31
 +incdir+/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2
 +incdir+/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/
 -Mamsrun=
@@ -316,17 +316,23 @@
 /tools/synopsys/vcs/W-2024.09-SP1/linux64/bin/vcs1
 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/uvm_pkg.sv
 uvm-1.2
-hello_world.sv
+./rtl/adder.sv
+./tb/tb_adder.sv
 /tools/synopsys/vcs/W-2024.09-SP1/linux64/lib/vcsdstub.tab
-55
+65
 which_declare=declare -f
 __MODULES_SHARE_MANPATH=:1
 __MODULES_LMINIT=module use --append /usr/share/Modules/modulefiles:module use --append /etc/modulefiles:module use --append /usr/share/modulefiles
 XDG_SESSION_TYPE=tty
-XDG_SESSION_ID=496
+XDG_SESSION_ID=911
 XDG_SESSION_CLASS=user
 XDG_RUNTIME_DIR=/run/user/1137
 XDG_DATA_DIRS=/home/hedu24/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_IPC_HOOK_CLI=/run/user/1137/vscode-ipc-8d4a75cc-1c0f-4fad-be0c-4e09a9db2990.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1137/vscode-git-683acfa78c.sock
+VSCODE_GIT_ASKPASS_NODE=/home/hedu24/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/node
+VSCODE_GIT_ASKPASS_MAIN=/home/hedu24/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
 VMR_MODE_FLAG=64
 VERDI_HOME=/tools/synopsys/verdi/W-2024.09-SP2
 VC_STATIC_HOME=/tools/synopsys/vc_static/W-2024.09-2
@@ -343,12 +349,15 @@ VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys/vcs/W-2024.09-SP1/linux64
+TERM_PROGRAM_VERSION=1.100.1
+TERM_PROGRAM=vscode
 S_COLORS=auto
 SYN_HOME=/tools/synopsys/syn/V-2023.12-SP5-4
 SYNOPSYS=/tools/synopsys
-SSH_TTY=/dev/pts/37
-SSH_CONNECTION=61.108.38.194 56962 222.234.38.90 22
-SSH_CLIENT=61.108.38.194 56962 22
+SSL_CERT_FILE=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+SSL_CERT_DIR=/etc/pki/tls/certs
+SSH_CONNECTION=61.108.38.194 50429 222.234.38.90 22
+SSH_CLIENT=61.108.38.194 50429 22
 SNPS_VCS_PYTHON3=/tools/synopsys/vcs/W-2024.09-SP1/linux64/bin/Python3/bin/python3
 SNPS_VCS_CLANG_PATH=/tools/synopsys/vcs/W-2024.09-SP1/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -360,15 +369,17 @@ MOTD_SHOWN=pam
 MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
 MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
 MODULESHOME=/usr/share/Modules
-MODULEPATH=/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
 LOADEDMODULES=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_HOME=/tools/synopsys/lc/V-2023.12-SP5-5
 LC_ALL=C
 ICC2_HOME=/tools/synopsys/icc2/W-2024.09-SP1
 HISTCONTROL=ignoredups
+GIT_ASKPASS=/home/hedu24/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/extensions/git/dist/askpass.sh
 FM_HOME=/tools/synopsys/fm/W-2024.09-SP4
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1137/bus
+COLORTERM=truecolor
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
 BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then_ eval "module $@";_ else_ /usr/bin/scl "$@";_ fi_}
 BASH_FUNC_module%%=() {  local _mlredir=1;_ if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then_ if [ "$MODULES_REDIRECT_OUTPUT" = '0' ]; then_ _mlredir=0;_ else_ if [ "$MODULES_REDIRECT_OUTPUT" = '1' ]; then_ _mlredir=1;_ fi;_ fi;_ fi;_ case " $@ " in _ *' --no-redirect '*)_ _mlredir=0_ ;;_ *' --redirect '*)_ _mlredir=1_ ;;_ esac;_ if [ $_mlredir -eq 0 ]; then_ _module_raw "$@";_ else_ _module_raw "$@" 2>&1;_ fi_}
@@ -376,7 +387,7 @@ BASH_FUNC_ml%%=() {  module ml "$@"_}
 BASH_FUNC__module_raw%%=() {  eval "$(/usr/bin/tclsh '/usr/share/Modules/libexec/modulecmd.tcl' bash "$@")";_ _mlstatus=$?;_ return $_mlstatus_}
 0
 0
-147
+148
 1733289099 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/vcs/vcs_uvm_alt.sv
 1733289098 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/reg/snps_uvm_reg_bank.svh
 1733289098 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
@@ -521,7 +532,8 @@ BASH_FUNC__module_raw%%=() {  eval "$(/usr/bin/tclsh '/usr/share/Modules/libexec
 1733289098 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/macros/uvm_global_defines.svh
 1733289098 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/macros/uvm_version_defines.svh
 1733289099 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/uvm_macros.svh
-1747204860 hello_world.sv
+1747281052 ./tb/tb_adder.sv
+1747280208 ./rtl/adder.sv
 1733289099 /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/uvm_pkg.sv
 1733285154 /tools/synopsys/vcs/W-2024.09-SP1/linux64/lib/vcsdstub.tab
 6
@@ -531,5 +543,5 @@ BASH_FUNC__module_raw%%=() {  eval "$(/usr/bin/tclsh '/usr/share/Modules/libexec
 1733286010 /tools/synopsys/vcs/W-2024.09-SP1/linux64/lib/liberrorinf.so
 1733286000 /tools/synopsys/vcs/W-2024.09-SP1/linux64/lib/libsnpsmalloc.so
 1733285992 /tools/synopsys/vcs/W-2024.09-SP1/linux64/lib/libvfs.so
-1747207465 simv.daidir
+1747281083 simv.daidir
 -1 partitionlib

@@ -6,3 +6,4 @@ all ignore
 !.gitignore
 !uvm_study/
 !uvm_study/**
+!readme.md
