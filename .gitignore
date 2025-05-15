@@ -1,0 +1,8 @@
+all ignore
+*
+
+!/dev/
+!/dev/**
+!.gitignore
+!uvm_study/
+!uvm_study/**
