@@ -7,3 +7,6 @@ all ignore
 !uvm_study/
 !uvm_study/**
 !readme.md
+!/img
+!*.png
+!*.gif
