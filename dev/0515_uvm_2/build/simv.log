@@ -1,0 +1,795 @@
+Command: /home/hedu24/dev/0515_uvm_2/././build/simv +UVM_TESTNAME=test -l ././build/simv.log +fsdbfile+./build/wave.fsdb
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  May 16 11:14 2025
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file './build/wave.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*Verdi* WARNING: Env/runtime option has specified fsdbfile name as "./build/wave.fsdb". Fsdbfile name in task "wave.fsdb" is ignored.
+UVM_INFO @ 0: reporter [RNTST] Running test test...
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               test                    -     @342 
+  ENV                      adder_environment       -     @361 
+    AGT                    adder_agent             -     @389 
+      DRV                  adder_driver            -     @418 
+        rsp_port           uvm_analysis_port       -     @437 
+        seq_item_port      uvm_seq_item_pull_port  -     @427 
+      MON                  adder_monitor           -     @399 
+        WRITE              uvm_analysis_port       -     @408 
+      SQR                  uvm_sequencer           -     @447 
+        rsp_export         uvm_analysis_export     -     @456 
+        seq_item_export    uvm_seq_item_pull_imp   -     @574 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    SCO                    adder_scoreboard        -     @370 
+      READ                 uvm_analysis_imp        -     @379 
+--------------------------------------------------------------
+
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 0: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:62, b:75
+UVM_INFO ./tb/tb_adder.sv(78) @ 50: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:62, b:75
+UVM_INFO ./tb/tb_adder.sv(120) @ 60: uvm_test_top.ENV.AGT.MON [MON] sampled a:62, b:75, y:137
+UVM_INFO ./tb/tb_adder.sv(147) @ 60: uvm_test_top.ENV.SCO [SCO] Recived a:62, b:75, y:137
+ITEM: (adder_seq_item@589) { a: 'h3e  b: 'h4b  y: 'h89  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 60: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 60: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:181, b:39
+UVM_INFO ./tb/tb_adder.sv(78) @ 150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:181, b:39
+UVM_INFO ./tb/tb_adder.sv(120) @ 160: uvm_test_top.ENV.AGT.MON [MON] sampled a:181, b:39, y:220
+UVM_INFO ./tb/tb_adder.sv(147) @ 160: uvm_test_top.ENV.SCO [SCO] Recived a:181, b:39, y:220
+ITEM: (adder_seq_item@589) { a: 'hb5  b: 'h27  y: 'hdc  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:253, b:184
+UVM_INFO ./tb/tb_adder.sv(78) @ 250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:253, b:184
+UVM_INFO ./tb/tb_adder.sv(120) @ 260: uvm_test_top.ENV.AGT.MON [MON] sampled a:253, b:184, y:437
+UVM_INFO ./tb/tb_adder.sv(147) @ 260: uvm_test_top.ENV.SCO [SCO] Recived a:253, b:184, y:437
+ITEM: (adder_seq_item@589) { a: 'hfd  b: 'hb8  y: 'h1b5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:168, b:189
+UVM_INFO ./tb/tb_adder.sv(78) @ 350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:168, b:189
+UVM_INFO ./tb/tb_adder.sv(120) @ 360: uvm_test_top.ENV.AGT.MON [MON] sampled a:168, b:189, y:357
+UVM_INFO ./tb/tb_adder.sv(147) @ 360: uvm_test_top.ENV.SCO [SCO] Recived a:168, b:189, y:357
+ITEM: (adder_seq_item@589) { a: 'ha8  b: 'hbd  y: 'h165  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:19, b:134
+UVM_INFO ./tb/tb_adder.sv(78) @ 450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:19, b:134
+UVM_INFO ./tb/tb_adder.sv(120) @ 460: uvm_test_top.ENV.AGT.MON [MON] sampled a:19, b:134, y:153
+UVM_INFO ./tb/tb_adder.sv(147) @ 460: uvm_test_top.ENV.SCO [SCO] Recived a:19, b:134, y:153
+ITEM: (adder_seq_item@589) { a: 'h13  b: 'h86  y: 'h99  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:53, b:46
+UVM_INFO ./tb/tb_adder.sv(78) @ 550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:53, b:46
+UVM_INFO ./tb/tb_adder.sv(120) @ 560: uvm_test_top.ENV.AGT.MON [MON] sampled a:53, b:46, y:99
+UVM_INFO ./tb/tb_adder.sv(147) @ 560: uvm_test_top.ENV.SCO [SCO] Recived a:53, b:46, y:99
+ITEM: (adder_seq_item@589) { a: 'h35  b: 'h2e  y: 'h63  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:2, b:244
+UVM_INFO ./tb/tb_adder.sv(78) @ 650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:2, b:244
+UVM_INFO ./tb/tb_adder.sv(120) @ 660: uvm_test_top.ENV.AGT.MON [MON] sampled a:2, b:244, y:246
+UVM_INFO ./tb/tb_adder.sv(147) @ 660: uvm_test_top.ENV.SCO [SCO] Recived a:2, b:244, y:246
+ITEM: (adder_seq_item@589) { a: 'h2  b: 'hf4  y: 'hf6  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:12, b:142
+UVM_INFO ./tb/tb_adder.sv(78) @ 750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:12, b:142
+UVM_INFO ./tb/tb_adder.sv(120) @ 760: uvm_test_top.ENV.AGT.MON [MON] sampled a:12, b:142, y:154
+UVM_INFO ./tb/tb_adder.sv(147) @ 760: uvm_test_top.ENV.SCO [SCO] Recived a:12, b:142, y:154
+ITEM: (adder_seq_item@589) { a: 'hc  b: 'h8e  y: 'h9a  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:42, b:123
+UVM_INFO ./tb/tb_adder.sv(78) @ 850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:42, b:123
+UVM_INFO ./tb/tb_adder.sv(120) @ 860: uvm_test_top.ENV.AGT.MON [MON] sampled a:42, b:123, y:165
+UVM_INFO ./tb/tb_adder.sv(147) @ 860: uvm_test_top.ENV.SCO [SCO] Recived a:42, b:123, y:165
+ITEM: (adder_seq_item@589) { a: 'h2a  b: 'h7b  y: 'ha5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:104, b:161
+UVM_INFO ./tb/tb_adder.sv(78) @ 950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:104, b:161
+UVM_INFO ./tb/tb_adder.sv(120) @ 960: uvm_test_top.ENV.AGT.MON [MON] sampled a:104, b:161, y:265
+UVM_INFO ./tb/tb_adder.sv(147) @ 960: uvm_test_top.ENV.SCO [SCO] Recived a:104, b:161, y:265
+ITEM: (adder_seq_item@589) { a: 'h68  b: 'ha1  y: 'h109  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:17, b:71
+UVM_INFO ./tb/tb_adder.sv(78) @ 1050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:17, b:71
+UVM_INFO ./tb/tb_adder.sv(120) @ 1060: uvm_test_top.ENV.AGT.MON [MON] sampled a:17, b:71, y:88
+UVM_INFO ./tb/tb_adder.sv(147) @ 1060: uvm_test_top.ENV.SCO [SCO] Recived a:17, b:71, y:88
+ITEM: (adder_seq_item@589) { a: 'h11  b: 'h47  y: 'h58  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:147, b:255
+UVM_INFO ./tb/tb_adder.sv(78) @ 1150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:147, b:255
+UVM_INFO ./tb/tb_adder.sv(120) @ 1160: uvm_test_top.ENV.AGT.MON [MON] sampled a:147, b:255, y:402
+UVM_INFO ./tb/tb_adder.sv(147) @ 1160: uvm_test_top.ENV.SCO [SCO] Recived a:147, b:255, y:402
+ITEM: (adder_seq_item@589) { a: 'h93  b: 'hff  y: 'h192  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:184, b:19
+UVM_INFO ./tb/tb_adder.sv(78) @ 1250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:184, b:19
+UVM_INFO ./tb/tb_adder.sv(120) @ 1260: uvm_test_top.ENV.AGT.MON [MON] sampled a:184, b:19, y:203
+UVM_INFO ./tb/tb_adder.sv(147) @ 1260: uvm_test_top.ENV.SCO [SCO] Recived a:184, b:19, y:203
+ITEM: (adder_seq_item@589) { a: 'hb8  b: 'h13  y: 'hcb  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:73, b:107
+UVM_INFO ./tb/tb_adder.sv(78) @ 1350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:73, b:107
+UVM_INFO ./tb/tb_adder.sv(120) @ 1360: uvm_test_top.ENV.AGT.MON [MON] sampled a:73, b:107, y:180
+UVM_INFO ./tb/tb_adder.sv(147) @ 1360: uvm_test_top.ENV.SCO [SCO] Recived a:73, b:107, y:180
+ITEM: (adder_seq_item@589) { a: 'h49  b: 'h6b  y: 'hb4  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:201, b:160
+UVM_INFO ./tb/tb_adder.sv(78) @ 1450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:201, b:160
+UVM_INFO ./tb/tb_adder.sv(120) @ 1460: uvm_test_top.ENV.AGT.MON [MON] sampled a:201, b:160, y:361
+UVM_INFO ./tb/tb_adder.sv(147) @ 1460: uvm_test_top.ENV.SCO [SCO] Recived a:201, b:160, y:361
+ITEM: (adder_seq_item@589) { a: 'hc9  b: 'ha0  y: 'h169  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:202, b:9
+UVM_INFO ./tb/tb_adder.sv(78) @ 1550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:202, b:9
+UVM_INFO ./tb/tb_adder.sv(120) @ 1560: uvm_test_top.ENV.AGT.MON [MON] sampled a:202, b:9, y:211
+UVM_INFO ./tb/tb_adder.sv(147) @ 1560: uvm_test_top.ENV.SCO [SCO] Recived a:202, b:9, y:211
+ITEM: (adder_seq_item@589) { a: 'hca  b: 'h9  y: 'hd3  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:249, b:88
+UVM_INFO ./tb/tb_adder.sv(78) @ 1650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:249, b:88
+UVM_INFO ./tb/tb_adder.sv(120) @ 1660: uvm_test_top.ENV.AGT.MON [MON] sampled a:249, b:88, y:337
+UVM_INFO ./tb/tb_adder.sv(147) @ 1660: uvm_test_top.ENV.SCO [SCO] Recived a:249, b:88, y:337
+ITEM: (adder_seq_item@589) { a: 'hf9  b: 'h58  y: 'h151  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:192, b:112
+UVM_INFO ./tb/tb_adder.sv(78) @ 1750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:192, b:112
+UVM_INFO ./tb/tb_adder.sv(120) @ 1760: uvm_test_top.ENV.AGT.MON [MON] sampled a:192, b:112, y:304
+UVM_INFO ./tb/tb_adder.sv(147) @ 1760: uvm_test_top.ENV.SCO [SCO] Recived a:192, b:112, y:304
+ITEM: (adder_seq_item@589) { a: 'hc0  b: 'h70  y: 'h130  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:244, b:54
+UVM_INFO ./tb/tb_adder.sv(78) @ 1850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:244, b:54
+UVM_INFO ./tb/tb_adder.sv(120) @ 1860: uvm_test_top.ENV.AGT.MON [MON] sampled a:244, b:54, y:298
+UVM_INFO ./tb/tb_adder.sv(147) @ 1860: uvm_test_top.ENV.SCO [SCO] Recived a:244, b:54, y:298
+ITEM: (adder_seq_item@589) { a: 'hf4  b: 'h36  y: 'h12a  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:245, b:162
+UVM_INFO ./tb/tb_adder.sv(78) @ 1950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:245, b:162
+UVM_INFO ./tb/tb_adder.sv(120) @ 1960: uvm_test_top.ENV.AGT.MON [MON] sampled a:245, b:162, y:407
+UVM_INFO ./tb/tb_adder.sv(147) @ 1960: uvm_test_top.ENV.SCO [SCO] Recived a:245, b:162, y:407
+ITEM: (adder_seq_item@589) { a: 'hf5  b: 'ha2  y: 'h197  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 1960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 1960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:89, b:53
+UVM_INFO ./tb/tb_adder.sv(78) @ 2050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:89, b:53
+UVM_INFO ./tb/tb_adder.sv(120) @ 2060: uvm_test_top.ENV.AGT.MON [MON] sampled a:89, b:53, y:142
+UVM_INFO ./tb/tb_adder.sv(147) @ 2060: uvm_test_top.ENV.SCO [SCO] Recived a:89, b:53, y:142
+ITEM: (adder_seq_item@589) { a: 'h59  b: 'h35  y: 'h8e  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:244, b:16
+UVM_INFO ./tb/tb_adder.sv(78) @ 2150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:244, b:16
+UVM_INFO ./tb/tb_adder.sv(120) @ 2160: uvm_test_top.ENV.AGT.MON [MON] sampled a:244, b:16, y:260
+UVM_INFO ./tb/tb_adder.sv(147) @ 2160: uvm_test_top.ENV.SCO [SCO] Recived a:244, b:16, y:260
+ITEM: (adder_seq_item@589) { a: 'hf4  b: 'h10  y: 'h104  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:143, b:102
+UVM_INFO ./tb/tb_adder.sv(78) @ 2250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:143, b:102
+UVM_INFO ./tb/tb_adder.sv(120) @ 2260: uvm_test_top.ENV.AGT.MON [MON] sampled a:143, b:102, y:245
+UVM_INFO ./tb/tb_adder.sv(147) @ 2260: uvm_test_top.ENV.SCO [SCO] Recived a:143, b:102, y:245
+ITEM: (adder_seq_item@589) { a: 'h8f  b: 'h66  y: 'hf5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:166, b:181
+UVM_INFO ./tb/tb_adder.sv(78) @ 2350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:166, b:181
+UVM_INFO ./tb/tb_adder.sv(120) @ 2360: uvm_test_top.ENV.AGT.MON [MON] sampled a:166, b:181, y:347
+UVM_INFO ./tb/tb_adder.sv(147) @ 2360: uvm_test_top.ENV.SCO [SCO] Recived a:166, b:181, y:347
+ITEM: (adder_seq_item@589) { a: 'ha6  b: 'hb5  y: 'h15b  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:206, b:141
+UVM_INFO ./tb/tb_adder.sv(78) @ 2450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:206, b:141
+UVM_INFO ./tb/tb_adder.sv(120) @ 2460: uvm_test_top.ENV.AGT.MON [MON] sampled a:206, b:141, y:347
+UVM_INFO ./tb/tb_adder.sv(147) @ 2460: uvm_test_top.ENV.SCO [SCO] Recived a:206, b:141, y:347
+ITEM: (adder_seq_item@589) { a: 'hce  b: 'h8d  y: 'h15b  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:29, b:42
+UVM_INFO ./tb/tb_adder.sv(78) @ 2550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:29, b:42
+UVM_INFO ./tb/tb_adder.sv(120) @ 2560: uvm_test_top.ENV.AGT.MON [MON] sampled a:29, b:42, y:71
+UVM_INFO ./tb/tb_adder.sv(147) @ 2560: uvm_test_top.ENV.SCO [SCO] Recived a:29, b:42, y:71
+ITEM: (adder_seq_item@589) { a: 'h1d  b: 'h2a  y: 'h47  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:212, b:33
+UVM_INFO ./tb/tb_adder.sv(78) @ 2650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:212, b:33
+UVM_INFO ./tb/tb_adder.sv(120) @ 2660: uvm_test_top.ENV.AGT.MON [MON] sampled a:212, b:33, y:245
+UVM_INFO ./tb/tb_adder.sv(147) @ 2660: uvm_test_top.ENV.SCO [SCO] Recived a:212, b:33, y:245
+ITEM: (adder_seq_item@589) { a: 'hd4  b: 'h21  y: 'hf5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:141, b:165
+UVM_INFO ./tb/tb_adder.sv(78) @ 2750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:141, b:165
+UVM_INFO ./tb/tb_adder.sv(120) @ 2760: uvm_test_top.ENV.AGT.MON [MON] sampled a:141, b:165, y:306
+UVM_INFO ./tb/tb_adder.sv(147) @ 2760: uvm_test_top.ENV.SCO [SCO] Recived a:141, b:165, y:306
+ITEM: (adder_seq_item@589) { a: 'h8d  b: 'ha5  y: 'h132  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:8, b:217
+UVM_INFO ./tb/tb_adder.sv(78) @ 2850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:8, b:217
+UVM_INFO ./tb/tb_adder.sv(120) @ 2860: uvm_test_top.ENV.AGT.MON [MON] sampled a:8, b:217, y:225
+UVM_INFO ./tb/tb_adder.sv(147) @ 2860: uvm_test_top.ENV.SCO [SCO] Recived a:8, b:217, y:225
+ITEM: (adder_seq_item@589) { a: 'h8  b: 'hd9  y: 'he1  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:76, b:66
+UVM_INFO ./tb/tb_adder.sv(78) @ 2950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:76, b:66
+UVM_INFO ./tb/tb_adder.sv(120) @ 2960: uvm_test_top.ENV.AGT.MON [MON] sampled a:76, b:66, y:142
+UVM_INFO ./tb/tb_adder.sv(147) @ 2960: uvm_test_top.ENV.SCO [SCO] Recived a:76, b:66, y:142
+ITEM: (adder_seq_item@589) { a: 'h4c  b: 'h42  y: 'h8e  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 2960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 2960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:186, b:24
+UVM_INFO ./tb/tb_adder.sv(78) @ 3050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:186, b:24
+UVM_INFO ./tb/tb_adder.sv(120) @ 3060: uvm_test_top.ENV.AGT.MON [MON] sampled a:186, b:24, y:210
+UVM_INFO ./tb/tb_adder.sv(147) @ 3060: uvm_test_top.ENV.SCO [SCO] Recived a:186, b:24, y:210
+ITEM: (adder_seq_item@589) { a: 'hba  b: 'h18  y: 'hd2  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:19, b:115
+UVM_INFO ./tb/tb_adder.sv(78) @ 3150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:19, b:115
+UVM_INFO ./tb/tb_adder.sv(120) @ 3160: uvm_test_top.ENV.AGT.MON [MON] sampled a:19, b:115, y:134
+UVM_INFO ./tb/tb_adder.sv(147) @ 3160: uvm_test_top.ENV.SCO [SCO] Recived a:19, b:115, y:134
+ITEM: (adder_seq_item@589) { a: 'h13  b: 'h73  y: 'h86  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:219, b:236
+UVM_INFO ./tb/tb_adder.sv(78) @ 3250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:219, b:236
+UVM_INFO ./tb/tb_adder.sv(120) @ 3260: uvm_test_top.ENV.AGT.MON [MON] sampled a:219, b:236, y:455
+UVM_INFO ./tb/tb_adder.sv(147) @ 3260: uvm_test_top.ENV.SCO [SCO] Recived a:219, b:236, y:455
+ITEM: (adder_seq_item@589) { a: 'hdb  b: 'hec  y: 'h1c7  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:192, b:162
+UVM_INFO ./tb/tb_adder.sv(78) @ 3350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:192, b:162
+UVM_INFO ./tb/tb_adder.sv(120) @ 3360: uvm_test_top.ENV.AGT.MON [MON] sampled a:192, b:162, y:354
+UVM_INFO ./tb/tb_adder.sv(147) @ 3360: uvm_test_top.ENV.SCO [SCO] Recived a:192, b:162, y:354
+ITEM: (adder_seq_item@589) { a: 'hc0  b: 'ha2  y: 'h162  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:150, b:102
+UVM_INFO ./tb/tb_adder.sv(78) @ 3450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:150, b:102
+UVM_INFO ./tb/tb_adder.sv(120) @ 3460: uvm_test_top.ENV.AGT.MON [MON] sampled a:150, b:102, y:252
+UVM_INFO ./tb/tb_adder.sv(147) @ 3460: uvm_test_top.ENV.SCO [SCO] Recived a:150, b:102, y:252
+ITEM: (adder_seq_item@589) { a: 'h96  b: 'h66  y: 'hfc  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:198, b:171
+UVM_INFO ./tb/tb_adder.sv(78) @ 3550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:198, b:171
+UVM_INFO ./tb/tb_adder.sv(120) @ 3560: uvm_test_top.ENV.AGT.MON [MON] sampled a:198, b:171, y:369
+UVM_INFO ./tb/tb_adder.sv(147) @ 3560: uvm_test_top.ENV.SCO [SCO] Recived a:198, b:171, y:369
+ITEM: (adder_seq_item@589) { a: 'hc6  b: 'hab  y: 'h171  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:218, b:130
+UVM_INFO ./tb/tb_adder.sv(78) @ 3650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:218, b:130
+UVM_INFO ./tb/tb_adder.sv(120) @ 3660: uvm_test_top.ENV.AGT.MON [MON] sampled a:218, b:130, y:348
+UVM_INFO ./tb/tb_adder.sv(147) @ 3660: uvm_test_top.ENV.SCO [SCO] Recived a:218, b:130, y:348
+ITEM: (adder_seq_item@589) { a: 'hda  b: 'h82  y: 'h15c  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:212, b:60
+UVM_INFO ./tb/tb_adder.sv(78) @ 3750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:212, b:60
+UVM_INFO ./tb/tb_adder.sv(120) @ 3760: uvm_test_top.ENV.AGT.MON [MON] sampled a:212, b:60, y:272
+UVM_INFO ./tb/tb_adder.sv(147) @ 3760: uvm_test_top.ENV.SCO [SCO] Recived a:212, b:60, y:272
+ITEM: (adder_seq_item@589) { a: 'hd4  b: 'h3c  y: 'h110  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:155, b:28
+UVM_INFO ./tb/tb_adder.sv(78) @ 3850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:155, b:28
+UVM_INFO ./tb/tb_adder.sv(120) @ 3860: uvm_test_top.ENV.AGT.MON [MON] sampled a:155, b:28, y:183
+UVM_INFO ./tb/tb_adder.sv(147) @ 3860: uvm_test_top.ENV.SCO [SCO] Recived a:155, b:28, y:183
+ITEM: (adder_seq_item@589) { a: 'h9b  b: 'h1c  y: 'hb7  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:198, b:153
+UVM_INFO ./tb/tb_adder.sv(78) @ 3950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:198, b:153
+UVM_INFO ./tb/tb_adder.sv(120) @ 3960: uvm_test_top.ENV.AGT.MON [MON] sampled a:198, b:153, y:351
+UVM_INFO ./tb/tb_adder.sv(147) @ 3960: uvm_test_top.ENV.SCO [SCO] Recived a:198, b:153, y:351
+ITEM: (adder_seq_item@589) { a: 'hc6  b: 'h99  y: 'h15f  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 3960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 3960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:99, b:191
+UVM_INFO ./tb/tb_adder.sv(78) @ 4050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:99, b:191
+UVM_INFO ./tb/tb_adder.sv(120) @ 4060: uvm_test_top.ENV.AGT.MON [MON] sampled a:99, b:191, y:290
+UVM_INFO ./tb/tb_adder.sv(147) @ 4060: uvm_test_top.ENV.SCO [SCO] Recived a:99, b:191, y:290
+ITEM: (adder_seq_item@589) { a: 'h63  b: 'hbf  y: 'h122  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:223, b:25
+UVM_INFO ./tb/tb_adder.sv(78) @ 4150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:223, b:25
+UVM_INFO ./tb/tb_adder.sv(120) @ 4160: uvm_test_top.ENV.AGT.MON [MON] sampled a:223, b:25, y:248
+UVM_INFO ./tb/tb_adder.sv(147) @ 4160: uvm_test_top.ENV.SCO [SCO] Recived a:223, b:25, y:248
+ITEM: (adder_seq_item@589) { a: 'hdf  b: 'h19  y: 'hf8  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:227, b:107
+UVM_INFO ./tb/tb_adder.sv(78) @ 4250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:227, b:107
+UVM_INFO ./tb/tb_adder.sv(120) @ 4260: uvm_test_top.ENV.AGT.MON [MON] sampled a:227, b:107, y:334
+UVM_INFO ./tb/tb_adder.sv(147) @ 4260: uvm_test_top.ENV.SCO [SCO] Recived a:227, b:107, y:334
+ITEM: (adder_seq_item@589) { a: 'he3  b: 'h6b  y: 'h14e  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:89, b:155
+UVM_INFO ./tb/tb_adder.sv(78) @ 4350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:89, b:155
+UVM_INFO ./tb/tb_adder.sv(120) @ 4360: uvm_test_top.ENV.AGT.MON [MON] sampled a:89, b:155, y:244
+UVM_INFO ./tb/tb_adder.sv(147) @ 4360: uvm_test_top.ENV.SCO [SCO] Recived a:89, b:155, y:244
+ITEM: (adder_seq_item@589) { a: 'h59  b: 'h9b  y: 'hf4  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:148, b:52
+UVM_INFO ./tb/tb_adder.sv(78) @ 4450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:148, b:52
+UVM_INFO ./tb/tb_adder.sv(120) @ 4460: uvm_test_top.ENV.AGT.MON [MON] sampled a:148, b:52, y:200
+UVM_INFO ./tb/tb_adder.sv(147) @ 4460: uvm_test_top.ENV.SCO [SCO] Recived a:148, b:52, y:200
+ITEM: (adder_seq_item@589) { a: 'h94  b: 'h34  y: 'hc8  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:145, b:236
+UVM_INFO ./tb/tb_adder.sv(78) @ 4550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:145, b:236
+UVM_INFO ./tb/tb_adder.sv(120) @ 4560: uvm_test_top.ENV.AGT.MON [MON] sampled a:145, b:236, y:381
+UVM_INFO ./tb/tb_adder.sv(147) @ 4560: uvm_test_top.ENV.SCO [SCO] Recived a:145, b:236, y:381
+ITEM: (adder_seq_item@589) { a: 'h91  b: 'hec  y: 'h17d  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:36, b:187
+UVM_INFO ./tb/tb_adder.sv(78) @ 4650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:36, b:187
+UVM_INFO ./tb/tb_adder.sv(120) @ 4660: uvm_test_top.ENV.AGT.MON [MON] sampled a:36, b:187, y:223
+UVM_INFO ./tb/tb_adder.sv(147) @ 4660: uvm_test_top.ENV.SCO [SCO] Recived a:36, b:187, y:223
+ITEM: (adder_seq_item@589) { a: 'h24  b: 'hbb  y: 'hdf  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:52, b:101
+UVM_INFO ./tb/tb_adder.sv(78) @ 4750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:52, b:101
+UVM_INFO ./tb/tb_adder.sv(120) @ 4760: uvm_test_top.ENV.AGT.MON [MON] sampled a:52, b:101, y:153
+UVM_INFO ./tb/tb_adder.sv(147) @ 4760: uvm_test_top.ENV.SCO [SCO] Recived a:52, b:101, y:153
+ITEM: (adder_seq_item@589) { a: 'h34  b: 'h65  y: 'h99  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:35, b:49
+UVM_INFO ./tb/tb_adder.sv(78) @ 4850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:35, b:49
+UVM_INFO ./tb/tb_adder.sv(120) @ 4860: uvm_test_top.ENV.AGT.MON [MON] sampled a:35, b:49, y:84
+UVM_INFO ./tb/tb_adder.sv(147) @ 4860: uvm_test_top.ENV.SCO [SCO] Recived a:35, b:49, y:84
+ITEM: (adder_seq_item@589) { a: 'h23  b: 'h31  y: 'h54  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:202, b:172
+UVM_INFO ./tb/tb_adder.sv(78) @ 4950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:202, b:172
+UVM_INFO ./tb/tb_adder.sv(120) @ 4960: uvm_test_top.ENV.AGT.MON [MON] sampled a:202, b:172, y:374
+UVM_INFO ./tb/tb_adder.sv(147) @ 4960: uvm_test_top.ENV.SCO [SCO] Recived a:202, b:172, y:374
+ITEM: (adder_seq_item@589) { a: 'hca  b: 'hac  y: 'h176  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 4960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 4960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:131, b:209
+UVM_INFO ./tb/tb_adder.sv(78) @ 5050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:131, b:209
+UVM_INFO ./tb/tb_adder.sv(120) @ 5060: uvm_test_top.ENV.AGT.MON [MON] sampled a:131, b:209, y:340
+UVM_INFO ./tb/tb_adder.sv(147) @ 5060: uvm_test_top.ENV.SCO [SCO] Recived a:131, b:209, y:340
+ITEM: (adder_seq_item@589) { a: 'h83  b: 'hd1  y: 'h154  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:218, b:33
+UVM_INFO ./tb/tb_adder.sv(78) @ 5150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:218, b:33
+UVM_INFO ./tb/tb_adder.sv(120) @ 5160: uvm_test_top.ENV.AGT.MON [MON] sampled a:218, b:33, y:251
+UVM_INFO ./tb/tb_adder.sv(147) @ 5160: uvm_test_top.ENV.SCO [SCO] Recived a:218, b:33, y:251
+ITEM: (adder_seq_item@589) { a: 'hda  b: 'h21  y: 'hfb  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:116, b:166
+UVM_INFO ./tb/tb_adder.sv(78) @ 5250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:116, b:166
+UVM_INFO ./tb/tb_adder.sv(120) @ 5260: uvm_test_top.ENV.AGT.MON [MON] sampled a:116, b:166, y:282
+UVM_INFO ./tb/tb_adder.sv(147) @ 5260: uvm_test_top.ENV.SCO [SCO] Recived a:116, b:166, y:282
+ITEM: (adder_seq_item@589) { a: 'h74  b: 'ha6  y: 'h11a  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:227, b:0
+UVM_INFO ./tb/tb_adder.sv(78) @ 5350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:227, b:0
+UVM_INFO ./tb/tb_adder.sv(120) @ 5360: uvm_test_top.ENV.AGT.MON [MON] sampled a:227, b:0, y:227
+UVM_INFO ./tb/tb_adder.sv(147) @ 5360: uvm_test_top.ENV.SCO [SCO] Recived a:227, b:0, y:227
+ITEM: (adder_seq_item@589) { a: 'he3  b: 'h0  y: 'he3  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:152, b:20
+UVM_INFO ./tb/tb_adder.sv(78) @ 5450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:152, b:20
+UVM_INFO ./tb/tb_adder.sv(120) @ 5460: uvm_test_top.ENV.AGT.MON [MON] sampled a:152, b:20, y:172
+UVM_INFO ./tb/tb_adder.sv(147) @ 5460: uvm_test_top.ENV.SCO [SCO] Recived a:152, b:20, y:172
+ITEM: (adder_seq_item@589) { a: 'h98  b: 'h14  y: 'hac  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:213, b:67
+UVM_INFO ./tb/tb_adder.sv(78) @ 5550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:213, b:67
+UVM_INFO ./tb/tb_adder.sv(120) @ 5560: uvm_test_top.ENV.AGT.MON [MON] sampled a:213, b:67, y:280
+UVM_INFO ./tb/tb_adder.sv(147) @ 5560: uvm_test_top.ENV.SCO [SCO] Recived a:213, b:67, y:280
+ITEM: (adder_seq_item@589) { a: 'hd5  b: 'h43  y: 'h118  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:242, b:5
+UVM_INFO ./tb/tb_adder.sv(78) @ 5650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:242, b:5
+UVM_INFO ./tb/tb_adder.sv(120) @ 5660: uvm_test_top.ENV.AGT.MON [MON] sampled a:242, b:5, y:247
+UVM_INFO ./tb/tb_adder.sv(147) @ 5660: uvm_test_top.ENV.SCO [SCO] Recived a:242, b:5, y:247
+ITEM: (adder_seq_item@589) { a: 'hf2  b: 'h5  y: 'hf7  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:174, b:189
+UVM_INFO ./tb/tb_adder.sv(78) @ 5750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:174, b:189
+UVM_INFO ./tb/tb_adder.sv(120) @ 5760: uvm_test_top.ENV.AGT.MON [MON] sampled a:174, b:189, y:363
+UVM_INFO ./tb/tb_adder.sv(147) @ 5760: uvm_test_top.ENV.SCO [SCO] Recived a:174, b:189, y:363
+ITEM: (adder_seq_item@589) { a: 'hae  b: 'hbd  y: 'h16b  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:219, b:124
+UVM_INFO ./tb/tb_adder.sv(78) @ 5850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:219, b:124
+UVM_INFO ./tb/tb_adder.sv(120) @ 5860: uvm_test_top.ENV.AGT.MON [MON] sampled a:219, b:124, y:343
+UVM_INFO ./tb/tb_adder.sv(147) @ 5860: uvm_test_top.ENV.SCO [SCO] Recived a:219, b:124, y:343
+ITEM: (adder_seq_item@589) { a: 'hdb  b: 'h7c  y: 'h157  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:74, b:40
+UVM_INFO ./tb/tb_adder.sv(78) @ 5950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:74, b:40
+UVM_INFO ./tb/tb_adder.sv(120) @ 5960: uvm_test_top.ENV.AGT.MON [MON] sampled a:74, b:40, y:114
+UVM_INFO ./tb/tb_adder.sv(147) @ 5960: uvm_test_top.ENV.SCO [SCO] Recived a:74, b:40, y:114
+ITEM: (adder_seq_item@589) { a: 'h4a  b: 'h28  y: 'h72  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 5960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 5960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:202, b:137
+UVM_INFO ./tb/tb_adder.sv(78) @ 6050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:202, b:137
+UVM_INFO ./tb/tb_adder.sv(120) @ 6060: uvm_test_top.ENV.AGT.MON [MON] sampled a:202, b:137, y:339
+UVM_INFO ./tb/tb_adder.sv(147) @ 6060: uvm_test_top.ENV.SCO [SCO] Recived a:202, b:137, y:339
+ITEM: (adder_seq_item@589) { a: 'hca  b: 'h89  y: 'h153  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:177, b:100
+UVM_INFO ./tb/tb_adder.sv(78) @ 6150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:177, b:100
+UVM_INFO ./tb/tb_adder.sv(120) @ 6160: uvm_test_top.ENV.AGT.MON [MON] sampled a:177, b:100, y:277
+UVM_INFO ./tb/tb_adder.sv(147) @ 6160: uvm_test_top.ENV.SCO [SCO] Recived a:177, b:100, y:277
+ITEM: (adder_seq_item@589) { a: 'hb1  b: 'h64  y: 'h115  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:81, b:116
+UVM_INFO ./tb/tb_adder.sv(78) @ 6250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:81, b:116
+UVM_INFO ./tb/tb_adder.sv(120) @ 6260: uvm_test_top.ENV.AGT.MON [MON] sampled a:81, b:116, y:197
+UVM_INFO ./tb/tb_adder.sv(147) @ 6260: uvm_test_top.ENV.SCO [SCO] Recived a:81, b:116, y:197
+ITEM: (adder_seq_item@589) { a: 'h51  b: 'h74  y: 'hc5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:250, b:178
+UVM_INFO ./tb/tb_adder.sv(78) @ 6350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:250, b:178
+UVM_INFO ./tb/tb_adder.sv(120) @ 6360: uvm_test_top.ENV.AGT.MON [MON] sampled a:250, b:178, y:428
+UVM_INFO ./tb/tb_adder.sv(147) @ 6360: uvm_test_top.ENV.SCO [SCO] Recived a:250, b:178, y:428
+ITEM: (adder_seq_item@589) { a: 'hfa  b: 'hb2  y: 'h1ac  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:22, b:214
+UVM_INFO ./tb/tb_adder.sv(78) @ 6450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:22, b:214
+UVM_INFO ./tb/tb_adder.sv(120) @ 6460: uvm_test_top.ENV.AGT.MON [MON] sampled a:22, b:214, y:236
+UVM_INFO ./tb/tb_adder.sv(147) @ 6460: uvm_test_top.ENV.SCO [SCO] Recived a:22, b:214, y:236
+ITEM: (adder_seq_item@589) { a: 'h16  b: 'hd6  y: 'hec  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:234, b:165
+UVM_INFO ./tb/tb_adder.sv(78) @ 6550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:234, b:165
+UVM_INFO ./tb/tb_adder.sv(120) @ 6560: uvm_test_top.ENV.AGT.MON [MON] sampled a:234, b:165, y:399
+UVM_INFO ./tb/tb_adder.sv(147) @ 6560: uvm_test_top.ENV.SCO [SCO] Recived a:234, b:165, y:399
+ITEM: (adder_seq_item@589) { a: 'hea  b: 'ha5  y: 'h18f  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:56, b:171
+UVM_INFO ./tb/tb_adder.sv(78) @ 6650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:56, b:171
+UVM_INFO ./tb/tb_adder.sv(120) @ 6660: uvm_test_top.ENV.AGT.MON [MON] sampled a:56, b:171, y:227
+UVM_INFO ./tb/tb_adder.sv(147) @ 6660: uvm_test_top.ENV.SCO [SCO] Recived a:56, b:171, y:227
+ITEM: (adder_seq_item@589) { a: 'h38  b: 'hab  y: 'he3  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:49, b:185
+UVM_INFO ./tb/tb_adder.sv(78) @ 6750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:49, b:185
+UVM_INFO ./tb/tb_adder.sv(120) @ 6760: uvm_test_top.ENV.AGT.MON [MON] sampled a:49, b:185, y:234
+UVM_INFO ./tb/tb_adder.sv(147) @ 6760: uvm_test_top.ENV.SCO [SCO] Recived a:49, b:185, y:234
+ITEM: (adder_seq_item@589) { a: 'h31  b: 'hb9  y: 'hea  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:35, b:33
+UVM_INFO ./tb/tb_adder.sv(78) @ 6850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:35, b:33
+UVM_INFO ./tb/tb_adder.sv(120) @ 6860: uvm_test_top.ENV.AGT.MON [MON] sampled a:35, b:33, y:68
+UVM_INFO ./tb/tb_adder.sv(147) @ 6860: uvm_test_top.ENV.SCO [SCO] Recived a:35, b:33, y:68
+ITEM: (adder_seq_item@589) { a: 'h23  b: 'h21  y: 'h44  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:230, b:231
+UVM_INFO ./tb/tb_adder.sv(78) @ 6950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:230, b:231
+UVM_INFO ./tb/tb_adder.sv(120) @ 6960: uvm_test_top.ENV.AGT.MON [MON] sampled a:230, b:231, y:461
+UVM_INFO ./tb/tb_adder.sv(147) @ 6960: uvm_test_top.ENV.SCO [SCO] Recived a:230, b:231, y:461
+ITEM: (adder_seq_item@589) { a: 'he6  b: 'he7  y: 'h1cd  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 6960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 6960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:6, b:37
+UVM_INFO ./tb/tb_adder.sv(78) @ 7050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:6, b:37
+UVM_INFO ./tb/tb_adder.sv(120) @ 7060: uvm_test_top.ENV.AGT.MON [MON] sampled a:6, b:37, y:43
+UVM_INFO ./tb/tb_adder.sv(147) @ 7060: uvm_test_top.ENV.SCO [SCO] Recived a:6, b:37, y:43
+ITEM: (adder_seq_item@589) { a: 'h6  b: 'h25  y: 'h2b  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:195, b:23
+UVM_INFO ./tb/tb_adder.sv(78) @ 7150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:195, b:23
+UVM_INFO ./tb/tb_adder.sv(120) @ 7160: uvm_test_top.ENV.AGT.MON [MON] sampled a:195, b:23, y:218
+UVM_INFO ./tb/tb_adder.sv(147) @ 7160: uvm_test_top.ENV.SCO [SCO] Recived a:195, b:23, y:218
+ITEM: (adder_seq_item@589) { a: 'hc3  b: 'h17  y: 'hda  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:156, b:5
+UVM_INFO ./tb/tb_adder.sv(78) @ 7250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:156, b:5
+UVM_INFO ./tb/tb_adder.sv(120) @ 7260: uvm_test_top.ENV.AGT.MON [MON] sampled a:156, b:5, y:161
+UVM_INFO ./tb/tb_adder.sv(147) @ 7260: uvm_test_top.ENV.SCO [SCO] Recived a:156, b:5, y:161
+ITEM: (adder_seq_item@589) { a: 'h9c  b: 'h5  y: 'ha1  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:17, b:203
+UVM_INFO ./tb/tb_adder.sv(78) @ 7350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:17, b:203
+UVM_INFO ./tb/tb_adder.sv(120) @ 7360: uvm_test_top.ENV.AGT.MON [MON] sampled a:17, b:203, y:220
+UVM_INFO ./tb/tb_adder.sv(147) @ 7360: uvm_test_top.ENV.SCO [SCO] Recived a:17, b:203, y:220
+ITEM: (adder_seq_item@589) { a: 'h11  b: 'hcb  y: 'hdc  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:186, b:15
+UVM_INFO ./tb/tb_adder.sv(78) @ 7450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:186, b:15
+UVM_INFO ./tb/tb_adder.sv(120) @ 7460: uvm_test_top.ENV.AGT.MON [MON] sampled a:186, b:15, y:201
+UVM_INFO ./tb/tb_adder.sv(147) @ 7460: uvm_test_top.ENV.SCO [SCO] Recived a:186, b:15, y:201
+ITEM: (adder_seq_item@589) { a: 'hba  b: 'hf  y: 'hc9  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:240, b:15
+UVM_INFO ./tb/tb_adder.sv(78) @ 7550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:240, b:15
+UVM_INFO ./tb/tb_adder.sv(120) @ 7560: uvm_test_top.ENV.AGT.MON [MON] sampled a:240, b:15, y:255
+UVM_INFO ./tb/tb_adder.sv(147) @ 7560: uvm_test_top.ENV.SCO [SCO] Recived a:240, b:15, y:255
+ITEM: (adder_seq_item@589) { a: 'hf0  b: 'hf  y: 'hff  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:17, b:131
+UVM_INFO ./tb/tb_adder.sv(78) @ 7650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:17, b:131
+UVM_INFO ./tb/tb_adder.sv(120) @ 7660: uvm_test_top.ENV.AGT.MON [MON] sampled a:17, b:131, y:148
+UVM_INFO ./tb/tb_adder.sv(147) @ 7660: uvm_test_top.ENV.SCO [SCO] Recived a:17, b:131, y:148
+ITEM: (adder_seq_item@589) { a: 'h11  b: 'h83  y: 'h94  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:185, b:7
+UVM_INFO ./tb/tb_adder.sv(78) @ 7750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:185, b:7
+UVM_INFO ./tb/tb_adder.sv(120) @ 7760: uvm_test_top.ENV.AGT.MON [MON] sampled a:185, b:7, y:192
+UVM_INFO ./tb/tb_adder.sv(147) @ 7760: uvm_test_top.ENV.SCO [SCO] Recived a:185, b:7, y:192
+ITEM: (adder_seq_item@589) { a: 'hb9  b: 'h7  y: 'hc0  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:79, b:82
+UVM_INFO ./tb/tb_adder.sv(78) @ 7850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:79, b:82
+UVM_INFO ./tb/tb_adder.sv(120) @ 7860: uvm_test_top.ENV.AGT.MON [MON] sampled a:79, b:82, y:161
+UVM_INFO ./tb/tb_adder.sv(147) @ 7860: uvm_test_top.ENV.SCO [SCO] Recived a:79, b:82, y:161
+ITEM: (adder_seq_item@589) { a: 'h4f  b: 'h52  y: 'ha1  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:126, b:19
+UVM_INFO ./tb/tb_adder.sv(78) @ 7950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:126, b:19
+UVM_INFO ./tb/tb_adder.sv(120) @ 7960: uvm_test_top.ENV.AGT.MON [MON] sampled a:126, b:19, y:145
+UVM_INFO ./tb/tb_adder.sv(147) @ 7960: uvm_test_top.ENV.SCO [SCO] Recived a:126, b:19, y:145
+ITEM: (adder_seq_item@589) { a: 'h7e  b: 'h13  y: 'h91  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 7960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 7960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:51, b:73
+UVM_INFO ./tb/tb_adder.sv(78) @ 8050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:51, b:73
+UVM_INFO ./tb/tb_adder.sv(120) @ 8060: uvm_test_top.ENV.AGT.MON [MON] sampled a:51, b:73, y:124
+UVM_INFO ./tb/tb_adder.sv(147) @ 8060: uvm_test_top.ENV.SCO [SCO] Recived a:51, b:73, y:124
+ITEM: (adder_seq_item@589) { a: 'h33  b: 'h49  y: 'h7c  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:144, b:33
+UVM_INFO ./tb/tb_adder.sv(78) @ 8150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:144, b:33
+UVM_INFO ./tb/tb_adder.sv(120) @ 8160: uvm_test_top.ENV.AGT.MON [MON] sampled a:144, b:33, y:177
+UVM_INFO ./tb/tb_adder.sv(147) @ 8160: uvm_test_top.ENV.SCO [SCO] Recived a:144, b:33, y:177
+ITEM: (adder_seq_item@589) { a: 'h90  b: 'h21  y: 'hb1  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:91, b:206
+UVM_INFO ./tb/tb_adder.sv(78) @ 8250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:91, b:206
+UVM_INFO ./tb/tb_adder.sv(120) @ 8260: uvm_test_top.ENV.AGT.MON [MON] sampled a:91, b:206, y:297
+UVM_INFO ./tb/tb_adder.sv(147) @ 8260: uvm_test_top.ENV.SCO [SCO] Recived a:91, b:206, y:297
+ITEM: (adder_seq_item@589) { a: 'h5b  b: 'hce  y: 'h129  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:14, b:70
+UVM_INFO ./tb/tb_adder.sv(78) @ 8350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:14, b:70
+UVM_INFO ./tb/tb_adder.sv(120) @ 8360: uvm_test_top.ENV.AGT.MON [MON] sampled a:14, b:70, y:84
+UVM_INFO ./tb/tb_adder.sv(147) @ 8360: uvm_test_top.ENV.SCO [SCO] Recived a:14, b:70, y:84
+ITEM: (adder_seq_item@589) { a: 'he  b: 'h46  y: 'h54  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:213, b:19
+UVM_INFO ./tb/tb_adder.sv(78) @ 8450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:213, b:19
+UVM_INFO ./tb/tb_adder.sv(120) @ 8460: uvm_test_top.ENV.AGT.MON [MON] sampled a:213, b:19, y:232
+UVM_INFO ./tb/tb_adder.sv(147) @ 8460: uvm_test_top.ENV.SCO [SCO] Recived a:213, b:19, y:232
+ITEM: (adder_seq_item@589) { a: 'hd5  b: 'h13  y: 'he8  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:97, b:84
+UVM_INFO ./tb/tb_adder.sv(78) @ 8550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:97, b:84
+UVM_INFO ./tb/tb_adder.sv(120) @ 8560: uvm_test_top.ENV.AGT.MON [MON] sampled a:97, b:84, y:181
+UVM_INFO ./tb/tb_adder.sv(147) @ 8560: uvm_test_top.ENV.SCO [SCO] Recived a:97, b:84, y:181
+ITEM: (adder_seq_item@589) { a: 'h61  b: 'h54  y: 'hb5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:126, b:214
+UVM_INFO ./tb/tb_adder.sv(78) @ 8650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:126, b:214
+UVM_INFO ./tb/tb_adder.sv(120) @ 8660: uvm_test_top.ENV.AGT.MON [MON] sampled a:126, b:214, y:340
+UVM_INFO ./tb/tb_adder.sv(147) @ 8660: uvm_test_top.ENV.SCO [SCO] Recived a:126, b:214, y:340
+ITEM: (adder_seq_item@589) { a: 'h7e  b: 'hd6  y: 'h154  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:21, b:6
+UVM_INFO ./tb/tb_adder.sv(78) @ 8750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:21, b:6
+UVM_INFO ./tb/tb_adder.sv(120) @ 8760: uvm_test_top.ENV.AGT.MON [MON] sampled a:21, b:6, y:27
+UVM_INFO ./tb/tb_adder.sv(147) @ 8760: uvm_test_top.ENV.SCO [SCO] Recived a:21, b:6, y:27
+ITEM: (adder_seq_item@589) { a: 'h15  b: 'h6  y: 'h1b  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:199, b:175
+UVM_INFO ./tb/tb_adder.sv(78) @ 8850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:199, b:175
+UVM_INFO ./tb/tb_adder.sv(120) @ 8860: uvm_test_top.ENV.AGT.MON [MON] sampled a:199, b:175, y:374
+UVM_INFO ./tb/tb_adder.sv(147) @ 8860: uvm_test_top.ENV.SCO [SCO] Recived a:199, b:175, y:374
+ITEM: (adder_seq_item@589) { a: 'hc7  b: 'haf  y: 'h176  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:193, b:239
+UVM_INFO ./tb/tb_adder.sv(78) @ 8950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:193, b:239
+UVM_INFO ./tb/tb_adder.sv(120) @ 8960: uvm_test_top.ENV.AGT.MON [MON] sampled a:193, b:239, y:432
+UVM_INFO ./tb/tb_adder.sv(147) @ 8960: uvm_test_top.ENV.SCO [SCO] Recived a:193, b:239, y:432
+ITEM: (adder_seq_item@589) { a: 'hc1  b: 'hef  y: 'h1b0  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 8960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 8960: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:162, b:67
+UVM_INFO ./tb/tb_adder.sv(78) @ 9050: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:162, b:67
+UVM_INFO ./tb/tb_adder.sv(120) @ 9060: uvm_test_top.ENV.AGT.MON [MON] sampled a:162, b:67, y:229
+UVM_INFO ./tb/tb_adder.sv(147) @ 9060: uvm_test_top.ENV.SCO [SCO] Recived a:162, b:67, y:229
+ITEM: (adder_seq_item@589) { a: 'ha2  b: 'h43  y: 'he5  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9060: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9060: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:194, b:81
+UVM_INFO ./tb/tb_adder.sv(78) @ 9150: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:194, b:81
+UVM_INFO ./tb/tb_adder.sv(120) @ 9160: uvm_test_top.ENV.AGT.MON [MON] sampled a:194, b:81, y:275
+UVM_INFO ./tb/tb_adder.sv(147) @ 9160: uvm_test_top.ENV.SCO [SCO] Recived a:194, b:81, y:275
+ITEM: (adder_seq_item@589) { a: 'hc2  b: 'h51  y: 'h113  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9160: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9160: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:63, b:214
+UVM_INFO ./tb/tb_adder.sv(78) @ 9250: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:63, b:214
+UVM_INFO ./tb/tb_adder.sv(120) @ 9260: uvm_test_top.ENV.AGT.MON [MON] sampled a:63, b:214, y:277
+UVM_INFO ./tb/tb_adder.sv(147) @ 9260: uvm_test_top.ENV.SCO [SCO] Recived a:63, b:214, y:277
+ITEM: (adder_seq_item@589) { a: 'h3f  b: 'hd6  y: 'h115  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9260: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9260: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:170, b:137
+UVM_INFO ./tb/tb_adder.sv(78) @ 9350: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:170, b:137
+UVM_INFO ./tb/tb_adder.sv(120) @ 9360: uvm_test_top.ENV.AGT.MON [MON] sampled a:170, b:137, y:307
+UVM_INFO ./tb/tb_adder.sv(147) @ 9360: uvm_test_top.ENV.SCO [SCO] Recived a:170, b:137, y:307
+ITEM: (adder_seq_item@589) { a: 'haa  b: 'h89  y: 'h133  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9360: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9360: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:77, b:0
+UVM_INFO ./tb/tb_adder.sv(78) @ 9450: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:77, b:0
+UVM_INFO ./tb/tb_adder.sv(120) @ 9460: uvm_test_top.ENV.AGT.MON [MON] sampled a:77, b:0, y:77
+UVM_INFO ./tb/tb_adder.sv(147) @ 9460: uvm_test_top.ENV.SCO [SCO] Recived a:77, b:0, y:77
+ITEM: (adder_seq_item@589) { a: 'h4d  b: 'h0  y: 'h4d  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9460: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9460: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:131, b:198
+UVM_INFO ./tb/tb_adder.sv(78) @ 9550: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:131, b:198
+UVM_INFO ./tb/tb_adder.sv(120) @ 9560: uvm_test_top.ENV.AGT.MON [MON] sampled a:131, b:198, y:329
+UVM_INFO ./tb/tb_adder.sv(147) @ 9560: uvm_test_top.ENV.SCO [SCO] Recived a:131, b:198, y:329
+ITEM: (adder_seq_item@589) { a: 'h83  b: 'hc6  y: 'h149  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9560: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9560: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:243, b:41
+UVM_INFO ./tb/tb_adder.sv(78) @ 9650: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:243, b:41
+UVM_INFO ./tb/tb_adder.sv(120) @ 9660: uvm_test_top.ENV.AGT.MON [MON] sampled a:243, b:41, y:284
+UVM_INFO ./tb/tb_adder.sv(147) @ 9660: uvm_test_top.ENV.SCO [SCO] Recived a:243, b:41, y:284
+ITEM: (adder_seq_item@589) { a: 'hf3  b: 'h29  y: 'h11c  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9660: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9660: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:125, b:90
+UVM_INFO ./tb/tb_adder.sv(78) @ 9750: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:125, b:90
+UVM_INFO ./tb/tb_adder.sv(120) @ 9760: uvm_test_top.ENV.AGT.MON [MON] sampled a:125, b:90, y:215
+UVM_INFO ./tb/tb_adder.sv(147) @ 9760: uvm_test_top.ENV.SCO [SCO] Recived a:125, b:90, y:215
+ITEM: (adder_seq_item@589) { a: 'h7d  b: 'h5a  y: 'hd7  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9760: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9760: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:96, b:44
+UVM_INFO ./tb/tb_adder.sv(78) @ 9850: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:96, b:44
+UVM_INFO ./tb/tb_adder.sv(120) @ 9860: uvm_test_top.ENV.AGT.MON [MON] sampled a:96, b:44, y:140
+UVM_INFO ./tb/tb_adder.sv(147) @ 9860: uvm_test_top.ENV.SCO [SCO] Recived a:96, b:44, y:140
+ITEM: (adder_seq_item@589) { a: 'h60  b: 'h2c  y: 'h8c  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9860: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+
+UVM_INFO ./tb/tb_adder.sv(44) @ 9860: uvm_test_top.ENV.AGT.SQR@@SEQ [SEQ] adder item to drive a:58, b:21
+UVM_INFO ./tb/tb_adder.sv(78) @ 9950: uvm_test_top.ENV.AGT.DRV [DRV] Drive DUT a:58, b:21
+UVM_INFO ./tb/tb_adder.sv(120) @ 9960: uvm_test_top.ENV.AGT.MON [MON] sampled a:58, b:21, y:79
+UVM_INFO ./tb/tb_adder.sv(147) @ 9960: uvm_test_top.ENV.SCO [SCO] Recived a:58, b:21, y:79
+ITEM: (adder_seq_item@589) { a: 'h3a  b: 'h15  y: 'h4f  } 
+UVM_INFO ./tb/tb_adder.sv(151) @ 9960: uvm_test_top.ENV.SCO [SCO] *** TEST PASSED ***
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 9960: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 9960: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 9960: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  505
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[DRV]   100
+[MON]   100
+[RNTST]     1
+[SCO]   200
+[SEQ]   100
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+
+$finish called from file "/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                 9960
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 996000 ps
+CPU Time:      0.240 seconds;       Data structure size:   0.6Mb
+Fri May 16 11:14:36 2025

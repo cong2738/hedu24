@@ -1,0 +1,47 @@
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+simSetSimulator "-vcssv" -exec "./build/simv" -args "+UVM_TESTNAME=test"
+debImport "-dbdir" "./build/simv.daidir"
+debLoadSimResult /home/hedu24/dev/0515_uvm_2/build/wave.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "513" "336" "900" "700"
+verdiSetActWin -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "513" "336" "900" "700"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiSetActWin -win $_nWave2
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/_vcs_msglog"
+wvGetSignalSetScope -win $_nWave2 "/tb_adder"
+wvGetSignalSetScope -win $_nWave2 "/tb_adder/a_if"
+wvGetSignalSetScope -win $_nWave2 "/tb_adder/a_if"
+wvGetSignalSetScope -win $_nWave2 "/tb_adder/a_if"
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_adder/a_if/a\[7:0\]} \
+{/tb_adder/a_if/b\[7:0\]} \
+{/tb_adder/a_if/clk} \
+{/tb_adder/a_if/y\[8:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_adder/a_if/a\[7:0\]} \
+{/tb_adder/a_if/b\[7:0\]} \
+{/tb_adder/a_if/clk} \
+{/tb_adder/a_if/y\[8:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvGetSignalClose -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2

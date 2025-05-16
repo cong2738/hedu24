@@ -36,7 +36,7 @@ class adder_sequence extends uvm_sequence #(adder_seq_item);
     virtual task body();
         adder_item = adder_seq_item::type_id::create("ITEM");
 
-        for (int i = 0; i < 10; i++) begin // test 횟수
+        for (int i = 0; i < 100; i++) begin // test 횟수
             start_item(adder_item);
 
             adder_item.randomize();
@@ -221,6 +221,11 @@ class test extends uvm_test; // test 구현 (UVM에서 상속받음 -> 기능 �
         adder_env = adder_environment::type_id::create("ENV", this); // factory excute  adder_seq = new();
     endfunction
 
+    virtual function void start_of_simulation_phase(uvm_phase phase);
+        super.start_of_simulation_phase(phase);
+        uvm_root::get().print_topology(); // 토폴로지 출력(시스템 구조)
+    endfunction
+
     virtual task run_phase(uvm_phase phase); // overriding test가 env를 다 실행시킴
         phase.raise_objection(this); // drop전까지 simulation이 끝나지 않는다
         adder_seq.start(adder_env.adder_agt.adder_sqr);
@@ -230,7 +235,6 @@ class test extends uvm_test; // test 구현 (UVM에서 상속받음 -> 기능 �
 endclass //test extends uvm_test
 
 module tb_adder();
-   // test adder_test;
    adder_if a_if();
 
    adder dut(
@@ -242,9 +246,11 @@ module tb_adder();
     always #5 a_if.clk = ~a_if.clk;
 
     initial begin
-        a_if.clk = 0;
+        // 시놉시스 버디를 위한 정보저장
+        $fsdbDumpvars(0); // 모든정보를 수집할거다
+        $fsdbDumpfile("wave.fsdb"); // "파일명"에다가 수집한정보를 저장(dump)할것
 
-        // adder_test = new("TEST", null);
+        a_if.clk = 0;  
         uvm_config_db #(virtual adder_if)::set(null, "*", "a_if", a_if);
 
         run_test(); // UVM 전체 동작
