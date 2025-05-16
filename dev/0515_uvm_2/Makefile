@@ -19,7 +19,7 @@ SIMV_OPT 	= +UVM_TESTNAME=$(TEST_NAME) \
 				-l ./$(BUILD_DIR)/$(LOG) \
 				+fsdbfile+$(FSDB_FILE)
 
-all: vsc simv
+all: vcs simv
 
 vcs: 
 	-mkdir build
