@@ -64,27 +64,54 @@
 # study
 
 ## uvm
-- sequenser의 역할: sequence class와 다른 클래스 간의 중재자(arviter) 역할. 이것도 나름 통신이니 신호 순서 중재를 해줄 필요가 있으니 사이에 끼어서 조율해줌  
-![alt text](/img/image.png)  
-- uvm_analysis_imp, uvm_analysis_port:  
-![alt text](/img/tlm-put.gif)
-![alt text](/img/image-1.png)
-- phase:  
-![alt text](/img/image.png)
+- **uvm 기초 구조 및 흐름**:  
+![uvm-tb](uvm-tb.gif)
+- **sequenser의 역할**: sequence class와 다른 클래스 간의 중재자(arviter) 역할. 이것도 나름 통신이니 신호 순서 중재를 해줄 필요가 있으니 사이에 끼어서 조율해줌  
+![alt text](image.png)  
+- **uvm_analysis_imp, uvm_analysis_port**:  
+![alt text](tlm-put.gif)  
+![alt text](image-1.png)  
+- **phase**:  
+![alt text](image.png)  
 
 ## workplace
-- vcs명령어, UVM:  
+- **vcs명령어**:  
     vcs -full64 -sverilog -ntb_opts uvm-1.2 ./경로/파일명 ./경로/파일명
     ./simv +UVM_TESTNAME=test -l ./경로/파일명  
     tip: vcs는 파일 변경사항이 없으면 컴파일을 새로 안함
-- make:  
+- **make**:  
     1976년 Stuart Feldman이 개발한 빌드 자동화 소프트웨어. 
     - makefile: 
-    - 변수 콜 방법: $(변수명)
-## synopsys verdy  
+        - 변수 콜 방법: $(변수명) 
+        - 문법
+            >**target** : **dependency**  
+            &emsp;**recipe**
+
+## synopsys verdi  
 - 버디를 사용하기 전에 시뮬레이션 데이터를 모두 ".fsdb"로 저장해야한다  
     그때 사용하는 시스템 베릴로그 기능은 dump이며 fsdbDump를 쓴다.
-    > **$fsdbDumpcars(0); // 모든정보를 수집할거다  
-    $fsdbDumpfile("wave.fsdb"); // "파일명"에다가 수집한정보를 저장(dump)할것  **
+    > $fsdbDumpcars(0); // 모든정보를 수집할거다  
+    $fsdbDumpfile("wave.fsdb"); // "파일명"에다가 수집한정보를 저장(dump)할것  
 
 # Project
+
+## spi통신
+- **특징**
+    1) 동기식 통신: 클럭사용, 장치간 동기화 필요
+    1) 전이중 통신: 송수싱 동시에 가능
+    1) 마스터-슬레이브 구조
+    1) 고속통신: UART나 I2C에 비교적 빠른속도
+    1) 다중 장치 지원: 하나의 마스터 장치가 여러개의 슬레이브에 버스형식(broadcasting)으로 연결
+- **spi 구조**
+    - 신호선  
+        1) SCLK:슬레이브의클럭(마스터가 보내줌)  
+        1) MOSI:마스터송신데이터  
+        1) MISO:슬레이브송신데이터  
+        1) CS:슬레이브셀렉트  
+    - 구조  
+    ![spi master-slave](image-5.png)   
+    ![alt text](image-4.png)  
+    - 타이밍 다이어그램  
+    <img src="image-6.png" width="90%"/>  
+
+## I2C통신
